@@ -1,10 +1,483 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome to My GitHub Page</title>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Di-SkilL">
+  <meta name="keywords" content="Reinforcement Learning, Diverse Skill Learning, Skill discovery, Automatic Curriculum
+  Learning, Mixture of Experts">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Di-SkilL</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+<!--  <link rel="icon" href="./static/images/favicon.svg">-->
+<!--  <link rel="icon" href="./static/images/Untitled.ico">-->
+    <link rel="icon" href="./static/images/alr-logo_large.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is my GitHub Page.</p>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Acquiring Diverse Skills using Curriculum Reinforcement Learning with Mixture of Experts</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href=https://alr.iar.kit.edu/21_69.php>Onur Celik</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href=https://alr.iar.kit.edu/21_117.php target="_blank">Aleksandar Taranovic</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href=https://alr.iar.kit.edu/21_65.php target=_blank>Gerhard Neumann</a><sup>1,2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Autonomous Learning Robots (ALR), Karlsruhe Institute of Technology (KIT)</span>
+            <span class="author-block"><sup>2</sup>FZI Research Center for Information Technology (FZI)</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+<!--                  TODO!!!!-->
+<!--                <a href="https://openreview.net/forum?id=6pPYRXKPpw"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fas fa-file-pdf"></i>-->
+<!--                  </span>-->
+<!--                  <span>Paper</span>-->
+<!--                </a>-->
+              </span>
+              <span class="link-block">
+<!--                  TODO!!!!-->
+<!--                <a href="https://arxiv.org/abs/2402.14606"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="ai ai-arxiv"></i>-->
+<!--                  </span>-->
+<!--                  <span>arXiv</span>-->
+<!--                </a>-->
+              </span>
+              <!-- Video Link. -->
+<!--              <span class="link-block">-->
+<!--                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fab fa-youtube"></i>-->
+<!--                  </span>-->
+<!--                  <span>Video</span>-->
+<!--                </a>-->
+<!--              </span>-->
+              <!-- Code Link. -->
+              <span class="link-block">
+<!--                  TODO!!!!-->
+<!--                <a href="https://github.com/ALRhub/d3il"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fab fa-github"></i>-->
+<!--                  </span>-->
+<!--                  <span>Code</span>-->
+<!--                  </a>-->
+              </span>
+              <!-- Dataset Link. -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+      <img src="./static/images/fig1.png">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Code and Final Paper Version Available Soon</h2>
+        <div class="content has-text-justified">
+            We will finalize our paper and release the code soon. Stay tuned!
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          Reinforcement learning (RL) is a powerful approach for acquiring a good-performing policy. However,
+            learning diverse skills is challenging in RL due to the commonly used Gaussian policy parameterization.
+            We propose <strong>Di</strong>verse <strong>Skil</strong>l <strong>L</strong>earning (Di-SkilL), an RL method for learning diverse
+            skills using Mixture of Experts, where each expert formalizes a skill as a contextual motion primitive.
+            Di-SkilL optimizes each expert and its associate context distribution to a maximum entropy objective that
+            incentivizes learning diverse skills in similar contexts. The per-expert context distribution enables
+            automatic curricula learning, allowing each expert to focus on its best-performing sub-region of the context
+            space. To overcome hard discontinuities and multi-modalities without any prior knowledge of the
+            environment's unknown context probability space, we leverage energy-based models to represent the per-expert
+            context distributions and demonstrate how we can efficiently train them using the standard policy gradient
+            objective. We show on challenging robot simulation tasks that Di-SkilL can learn diverse and performant
+            skills.
+<!--          <p>-->
+<!--            In this work, we introduce simulation benchmark environments and the corresponding Datasets with Diverse human Demonstrations for Imitation Learning (D3IL),-->
+<!--            designed explicitly to evaluate a model’s ability to learn multi-modal behavior.-->
+<!--            Our environments are designed to involve multiple sub-tasks that need to be solved, consider manipulation of multiple objects which increases the diversity-->
+<!--            of the behavior and can only be solved by policies that rely on closed loop sensory feedback.-->
+<!--            Other available datasets are missing at least one of these challenging properties.-->
+<!--            To address the challenge of diversity quantification, we introduce tractable metrics that provide valuable insights into a model’s ability to acquire-->
+<!--            and reproduce diverse behaviors.-->
+<!--            These metrics offer a practical means to assess the robustness and versatility of imitation learning algorithms.-->
+<!--          </p>-->
+<!--          <p>-->
+<!--            Furthermore, we conduct a thorough evaluation of state-of-the-art methods on the proposed task suite.-->
+<!--            This evaluation serves as a benchmark for assessing their capability to learn diverse behaviors.-->
+<!--            Our findings shed light on the effectiveness of these methods in tackling the intricate problem of capturing and generalizing multi-modal human-->
+<!--            behaviors, offering a valuable reference for the design of future imitation learning algorithms.-->
+
+<!--          </p>-->
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3">Why is Di-SkilL Able to Learn Diverse Skills?</h2>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+
+      <img src="./static/images/fig2.png" style="width: 80%; height: auto;">
+
+      </div>
+    </div>
+
+    <!-- Tasks -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Tasks</h2>
+          <div class="columns is-multiline">
+            <div class="column is-half">
+        <!-- 5-Link Reacher  -->
+            <h3 class="title is-4">5-Link Reacher</h3>
+                <div class="content has-text-justified">
+                  <p>
+                    The 5-Link reacher task is an extension of the classical 2-Link reacher task from OpenAI Gym.
+                      The reacher has to reach a goal position with its tip within all quadrants in the context space.
+                      A significant challenge in this task is the time-sparse reward that provides only a reward signal
+                      at the end of the episode.
+                  </p>
+                    <p>
+                      The following video shows diverse reaching skills learned by Di-SkilL. The skills were sampled during
+                      inference time from the gating distribution.
+                  </p>
+                </div>
+                <div class="content has-text-centered">
+                  <video id="replay-video"
+                         autoplay
+                         controls
+                         muted
+                         preload
+                         playsinline
+                         width="80%">
+                    <source src="./static/videos/reacher/reacher.mp4"
+                            type="video/mp4">
+                  </video>
+                </div>
+                <br/>
+            <!--/ 5-Link Reacher -->
+                </div>
+            <div class="column is-half">
+            <!-- BPObs  -->
+            <h3 class="title is-4">Box Pushing with Obstacles</h3>
+                <div class="content has-text-justified">
+                  <p>
+                    In the Box Pushing with Obstacle task a 7-DoF robot is tasked to push a box to a target position and
+                      rotation while avoiding an obstacle. The 5-dimensional context consists of the box's target
+                      position, orientation and the obstacle's position. The task is additionally challenging due to the
+                      time-sparse reward structure.
+                  </p>
+                    <p>
+                      The following video shows diverse reaching skills learned by Di-SkilL. The skills were sampled
+                        during inference time from the gating distribution.
+                  </p>
+                </div>
+                <div class="content has-text-centered">
+                  <video id="replay-video"
+                         autoplay
+                         controls
+                         muted
+                         preload
+                         playsinline
+                         width="86%">
+                    <source src="./static/videos/bpobs/bpobs.mp4"
+                            type="video/mp4">
+                  </video>
+                </div>
+                <br/>
+            <!--/ BPObs -->
+            </div>
+
+            <!-- Hopper Jump-->
+            <h3 class="title is-4">Hopper Jump</h3>
+            <div class="content has-text-justified">
+              <p>
+                The Hopper from OpenAI Gym is tasked to jump as high as possible while landing in a goal position as
+                  marked by the green and red dots. This task has a non-markovian reward structure which makes learning
+                  skills with step-based approaches infeasible.
+              </p>
+                <p>
+                The following videos show the behaviors of Di-SkilL's individual experts. We have sampled contexts from
+                    each per-expert context distribution and exectued the corresponding expert. The goal of the videos
+                    is to show that each expert is learning different skills.
+                    This <strong> first expert (left)</strong> builds momentum for the jump by using the first joint and stabilizes by
+                landing on its foot.
+                </br>
+                    This <strong> second expert (middle) </strong> builds momentum for the jump by using the first joint and stabilizes by
+                landing on the hopper's "head". The expert is responsible for landing positions that are further away
+                    from the initial position.
+                </br>
+                    This <strong> third expert (right)</strong> builds momentum for the jump by using the first joint and stabilizes by
+                landing on the hopper's "head". The expert is responsible for landing positions that are next to the
+                    initial position.
+                </p>
+            </div>
+            <div class="content has-text-centered">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     muted
+                     preload
+                     playsinline
+                     width="33%">
+                <source src="./static/videos/hj/expert1.mp4"
+                        type="video/mp4">
+              </video>
+
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     muted
+                     preload
+                     playsinline
+                     width="33%">
+                <source src="./static/videos/hj/expert2.mp4"
+                        type="video/mp4">
+              </video>
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     muted
+                     preload
+                     playsinline
+                     width="33%">
+                <source src="./static/videos/hj/expert3.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <br/>
+            <!--/ Hopper Jump -->
+
+            <!-- Table Tennis -->
+            <h3 class="title is-4">Table Tennis</h3>
+            <div class="content has-text-justified">
+              <p>
+                In the table tennis task a 7-degree of freedom (DoF) robot has to learn fast and precise motions to smash
+                  the ball to a desired position on the opponent's side. The 5-dimensional. context consists of the incoming
+                  ball's landing position, the desired landing position on the opponent's side and the ball's initial
+                  velocity. The table tennis environment requires good exploratory behavior and has a non-makrovian reward
+                  structure making step-based approaches infeasible to learn usefull skills.
+              </p>
+                <p>
+              The videos blow show diverse striking skills learned by Di-SkilL. For each of the videos the ball's
+              landing position on the opponent's side is fixed and the ball's inital landing position and velocity are
+              varied. The shown skills correspond to executing the experts sampled from the gatinng distribution during
+              inference.
+              </p>
+            </div>
+            <div class="content has-text-centered">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     muted
+                     preload
+                     playsinline
+                     width="49%">
+                <source src="./static/videos/tt/tt1.mp4"
+                        type="video/mp4">
+              </video>
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     muted
+                     preload
+                     playsinline
+                     width="49%">
+                <source src="./static/videos/tt/tt2.mp4"
+                        type="video/mp4">
+              </video>
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     muted
+                     preload
+                     playsinline
+                     width="49%">
+                <source src="./static/videos/tt/tt3.mp4"
+                        type="video/mp4">
+              </video>
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     muted
+                     preload
+                     playsinline
+                     width="49%">
+                <source src="./static/videos/tt/tt4.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <br/>
+            <!--/ Table Tennis -->
+              <!-- Robot Mini Golf-->
+            <h3 class="title is-4">Robot Mini Golf</h3>
+            <div class="content has-text-justified">
+              <p>
+                The 7-DoF robot is tasked to hit the ball in an environment with two obstacles, where the blue obstacle
+                  is static and the green is reset in each episode. The ball has to pass the tight goal on the other side
+                  of the table to achieve a success. This environment has a non-markovian reward structure which makes
+                  learning difficult.
+              </p>
+                <p>
+                    The following video shows diverse skills where the goal is fixed and the ball's and the obstacle's
+                    initial positions are varied. The experts are sampled from the gating distribution during inference.
+                </p>
+            </div>
+            <div class="content has-text-centered">
+              <video id="replay-video"
+                     autoplay
+                     controls
+                     muted
+                     preload
+                     playsinline
+                     width="60%">
+                <source src="./static/videos/mg/mg.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <br/>
+            <!--/ Robot Mini Golf -->
+          </div>
+        </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{
+celik2024acquiring,
+title={Acquiring Diverse Skills using Curriculum Reinforcement Learning with Mixture of Experts},
+author={Onur Celik, Aleksandar Taranovic, Gerhard Neumann},
+booktitle={Forty-first International Conference on Machine Learning},
+year={2024},
+organization={PMLR}
+}</code></pre>
+  </div>
+</section>
+
+
+<!--<footer class="footer">-->
+<!--  <div class="container">-->
+<!--    <div class="content has-text-centered">-->
+<!--      <a class="icon-link"-->
+<!--         href="./static/videos/nerfies_paper.pdf">-->
+<!--        <i class="fas fa-file-pdf"></i>-->
+<!--      </a>-->
+<!--      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>-->
+<!--        <i class="fab fa-github"></i>-->
+<!--      </a>-->
+<!--    </div>-->
+<!--    <div class="columns is-centered">-->
+<!--      <div class="column is-8">-->
+<!--        <div class="content">-->
+<!--          <p>-->
+<!--            This website is licensed under a <a rel="license"-->
+<!--                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative-->
+<!--            Commons Attribution-ShareAlike 4.0 International License</a>.-->
+<!--          </p>-->
+<!--          <p>-->
+<!--            This means you are free to borrow the <a-->
+<!--              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,-->
+<!--            we just ask that you link back to this page in the footer.-->
+<!--            Please remember to remove the analytics code included in the header of the website which-->
+<!--            you do not want on your website.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</footer>-->
+
 </body>
 </html>
