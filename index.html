@@ -9,8 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Di-SkilL</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+<!--  &lt;!&ndash; Global site tag (gtag.js) - Google Analytics &ndash;&gt;-->
+<!--  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>-->
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -42,6 +42,12 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 </head>
 <body>
 
@@ -87,16 +93,6 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-<!--              <span class="link-block">-->
-<!--                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"-->
-<!--                   class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="fab fa-youtube"></i>-->
-<!--                  </span>-->
-<!--                  <span>Video</span>-->
-<!--                </a>-->
-<!--              </span>-->
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/ALRhub/di-skill"
@@ -107,8 +103,6 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-
             </div>
           </div>
         </div>
@@ -120,6 +114,10 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
       <img src="./static/images/fig1.png">
+      Figure 1: During inference, the Mixture of Experts (MoE) policy observes a context $\boldsymbol{c}$ and selects an
+      expert to execute the corresponding skill. During training, the MoE model selects the context $\boldsymbol{c}_T$
+      it prefers through sampling from the per-expert energy-based context distribution. This preferred context sampling
+      enables automatic curriculum learning.
     </div>
   </div>
 </section>
@@ -128,9 +126,9 @@
     <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Code and Final Paper Version Available Soon</h2>
+        <h2 class="title is-3">Code Available Soon</h2>
         <div class="content has-text-justified">
-            We will finalize our paper and release the code soon. Stay tuned!
+            We will finalize and release the code soon. Stay tuned!
           </div>
       </div>
     </div>
@@ -156,39 +154,9 @@
             context distributions and demonstrate how we can efficiently train them using the standard policy gradient
             objective. We show on challenging robot simulation tasks that Di-SkilL can learn diverse and performant
             skills.
-<!--          <p>-->
-<!--            In this work, we introduce simulation benchmark environments and the corresponding Datasets with Diverse human Demonstrations for Imitation Learning (D3IL),-->
-<!--            designed explicitly to evaluate a model’s ability to learn multi-modal behavior.-->
-<!--            Our environments are designed to involve multiple sub-tasks that need to be solved, consider manipulation of multiple objects which increases the diversity-->
-<!--            of the behavior and can only be solved by policies that rely on closed loop sensory feedback.-->
-<!--            Other available datasets are missing at least one of these challenging properties.-->
-<!--            To address the challenge of diversity quantification, we introduce tractable metrics that provide valuable insights into a model’s ability to acquire-->
-<!--            and reproduce diverse behaviors.-->
-<!--            These metrics offer a practical means to assess the robustness and versatility of imitation learning algorithms.-->
-<!--          </p>-->
-<!--          <p>-->
-<!--            Furthermore, we conduct a thorough evaluation of state-of-the-art methods on the proposed task suite.-->
-<!--            This evaluation serves as a benchmark for assessing their capability to learn diverse behaviors.-->
-<!--            Our findings shed light on the effectiveness of these methods in tackling the intricate problem of capturing and generalizing multi-modal human-->
-<!--            behaviors, offering a valuable reference for the design of future imitation learning algorithms.-->
-
-<!--          </p>-->
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
   </div>
 </section>
 
@@ -196,14 +164,48 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <h2 class="title is-3">Why is Di-SkilL Able to Learn Diverse Skills?</h2>
+  <h2 class="title is-3">Diverse Skill Learning</h2>
     <div class="columns is-centered">
-      <div class="column is-full-width">
+        <div class="column is-full-width">
+        <h2 class="title is-4">Automatic Curriculum Learning using Energy-Based per-Expert Context Distribution</h2>
 
-      <img src="./static/images/fig2.png" style="width: 80%; height: auto;">
+         Figure 1 depicts the sampling procedure of Di-SkilL.During Inference the agent observes contexts
+          $\boldsymbol{c}$ from the environment's unknown context
+          distribution $p(\boldsymbol{c})$. The agent calculates the gating probabilities $\pi(o|\boldsymbol{c}$ for each
+          context and samples an expert $o$ resulting in $(o, \boldsymbol{c})$ samples marked in blue. During
+          Training we first sample a batch of contexts $\boldsymbol{c}$ from $p(\boldsymbol{c})$, which is used to
+          calculate the per-expert context distribution $\pi(\boldsymbol{c}|o)$ for each expert $o = 1,..., K$.
+          The $\pi(\boldsymbol{c}|o)$ provides a higher probability for contexts preferred by the expert
+          $\pi(\boldsymbol{\theta}|\boldsymbol{c}, o)$. To enable curriculum learning, we provide each expert the
+          contexts sampled from its corresponding
+          $\pi(\boldsymbol{c}|o)$, resulting in the samples $(o, \boldsymbol{c}_T)$ marked in orange. In both cases,
+          the chosen $\pi(\boldsymbol{\theta}|\boldsymbol{c}, o)$ samples motion primitive parameters
+          $\boldsymbol{\theta}$ for each context, resulting in
+          a trajectory $\tau$ that is subsequently executed on the environment. Before execution, the corresponding
+          context, e.g., the goal position of a box, needs to be set in the environment. This is illustrated by the
+          dashed arrows, with the context in blue for inference and orange for training.
 
       </div>
     </div>
+
+      <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-4">Specializing and Overlapping Context Distributions lead to Diverse Skills</h2>
+          <img src="./static/images/fig2.png" style="width: 80%; height: auto; margin-left: auto; margin-right: auto;
+          display: block;">
+              <p>
+                Figure 2: (a) High-probability regions of the individual per-expert context distributions, where a
+              color represents an expert $o$. (b) Number of active experts for context regions.
+                  </p>
+              <br>
+              <p>
+              The maximum entropy-based objective allows learning diverse skills to the same or similar tasks defined by
+              the contexts. For this, the per-expert context distributions need to specialize in a sub region of the
+              context context space (a), but at the same time overlapping regions are necessary to learn diverse skills
+              to similar tasks (b). These properties are ensured by the decomposed objective (please see the paper).
+              </p>
+          </div>
+      </div>
 
     <!-- Tasks -->
     <div class="columns is-centered">
