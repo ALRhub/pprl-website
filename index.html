@@ -8,20 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PointPatchRL</title>
 
-  <!--  &lt;!&ndash; Global site tag (gtag.js) - Google Analytics &ndash;&gt;-->
-  <!--  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>-->
-  <!--  <script>-->
-  <!--    window.dataLayer = window.dataLayer || [];-->
-
-  <!--    function gtag() {-->
-  <!--      dataLayer.push(arguments);-->
-  <!--    }-->
-
-  <!--    gtag('js', new Date());-->
-
-  <!--    gtag('config', 'G-PYVRSFMDRL');-->
-  <!--  </script>-->
-
   <script type="text/javascript">
     window.MathJax = {
       tex: {
@@ -43,9 +29,7 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <!--  <link rel="icon" href="./static/images/favicon.svg">-->
-  <!--  <link rel="icon" href="./static/images/Untitled.ico">-->
-  <link rel="icon" href="./static/images/alr-logo_large.png">
+  <link rel="icon" href="./static/images/patch_icon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -55,35 +39,42 @@
 </head>
 
 <body>
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">PointPatchRL - Masked Reconstruction Improves Reinforcement
-              Learning on Point Clouds</h1>
+            <h1 class="title is-2 publication-title">
+              PointPatchRL - Masked Reconstruction Improves Reinforcement Learning on Point Clouds
+            </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href=https://alr.iar.kit.edu/21_527.php target="_blank">Balázs Gyenes</a><sup>1,2</sup>,</span>
+                <a href=https://alr.iar.kit.edu/21_527.php target="_blank">Balázs Gyenes</a><sup>1,2</sup>,
+              </span>
               <span class="author-block">
-                Nikolai Franke<sup>1</sup>,</span>
+                Nikolai Franke<sup>1</sup>,
+              </span>
               <span class="author-block">
-                <a href=https://alr.iar.kit.edu/21_72.php target=_blank>Philipp Becker</a><sup>1,2</sup>,</span>
+                <a href=https://alr.iar.kit.edu/21_72.php target=_blank>Philipp Becker</a><sup>1,2</sup>,
+              </span>
               <span class="author-block">
-                <a href=https://alr.iar.kit.edu/21_65.php target=_blank>Gerhard Neumann</a><sup>1,2</sup>,</span>
+                <a href=https://alr.iar.kit.edu/21_65.php target=_blank>Gerhard Neumann</a><sup>1,2</sup>,
+              </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>Autonomous Learning Robots (ALR), Karlsruhe Institute of Technology
-                (KIT)</span>
-              <span class="author-block"><sup>2</sup>HIDSS4Health - Helmholtz Information and Data Science School for
-                Health</span>
+              <span class="author-block">
+                <sup>1</sup>Autonomous Learning Robots (ALR), Karlsruhe Institute of Technology (KIT)
+              </span>
+              <span class="author-block">
+                <sup>2</sup>HIDSS4Health - Helmholtz Information and Data Science School for Health
+              </span>
             </div>
 
             <div class="column has-text-centered">
+              <h2 class="title is-4">CoRL 2024 Spotlight</h2>
               <div class="publication-links">
-                <!-- PDF Link. -->
+                <!-- OpenReview Link. -->
                 <span class="link-block">
                   <a href="https://openreview.net/forum?id=3jNEz3kUSl"
                     class="external-link button is-normal is-rounded is-dark">
@@ -108,12 +99,10 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code (available soon!)</span>
+                    <span>Code (coming soon!)</span>
                   </a>
                 </span>
               </div>
-              This paper was published at <a href="https://www.corl.org/home"> CoRL 2024 </a> as a spotlight
-              presentation.
             </div>
           </div>
         </div>
@@ -124,56 +113,47 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <img src="./static/images/figure_overview.png">
-      Top: We train a patching-based tokenizer and transformer encoder to compute a latent embedding for the RL policy
+      <!-- Top: We train a patching-based tokenizer and transformer encoder to compute a latent embedding for the RL policy
       and state-action-value estimation using sequence pooling. The
       entire pipeline learns using the critic's gradients while we detach the latent embedding before pro-
       viding it to the actor. Bottom: We augment the policy learning using masked reconstruction. Using
-      the token sorting, masking, and transformer decoder introduced by PointGPT [17], we minimize the
+      the token sorting, masking, and transformer decoder introduced by PointGPT, we minimize the
       Chamfer distance for the point's positions and the mean squared reconstruction error for colors. This
       auxiliary loss provides an additional training signal for the shared encoder and tokenizer, improving
-      RL performance and sample efficiency.
+      RL performance and sample efficiency. -->
     </div>
     </div>
   </section>
 
-  <!-- <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Code Available Soon</h2>
-          <div class="content has-text-justified">
-            We will finalize and release the code soon. Stay tuned!
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
   <!-- Abstract. -->
-  <!-- <section class="section">
+  <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-            Reinforcement learning (RL) is a powerful approach for acquiring a good-performing policy. However,
-            learning diverse skills is challenging in RL due to the commonly used Gaussian policy parameterization.
-            We propose <strong>Di</strong>verse <strong>Skil</strong>l <strong>L</strong>earning (Di-SkilL), an RL
-            method for learning diverse
-            skills using Mixture of Experts, where each expert formalizes a skill as a contextual motion primitive.
-            Di-SkilL optimizes each expert and its associate context distribution to a maximum entropy objective that
-            incentivizes learning diverse skills in similar contexts. The per-expert context distribution enables
-            automatic curricula learning, allowing each expert to focus on its best-performing sub-region of the context
-            space. To overcome hard discontinuities and multi-modalities without any prior knowledge of the
-            environment's unknown context probability space, we leverage energy-based models to represent the per-expert
-            context distributions and demonstrate how we can efficiently train them using the standard policy gradient
-            objective. We show on challenging robot simulation tasks that Di-SkilL can learn diverse and performant
-            skills.
+            Perceiving the environment via cameras is crucial for Reinforcement Learning (RL) in robotics.
+            While images are a convenient form of representation, they often complicate extracting important geometric
+            details, especially with varying geometries or deformable objects.
+            In contrast, point clouds naturally represent this geometry and easily integrate color and positional data
+            from
+            multiple camera views.
+            However, while deep learning on point clouds has seen many recent successes, RL on point clouds is
+            under-researched, with only the simplest encoder architecture considered in the literature.
+            We introduce PointPatchRL (PPRL), a method for RL on point clouds that builds on the common paradigm of
+            dividing
+            point clouds into overlapping patches, tokenizing them, and processing the tokens with transformers.
+            PPRL provides significant improvements compared with other point-cloud processing architectures previously
+            used
+            for RL.
+            We then complement PPRL with masked reconstruction for representation learning and show that our method
+            outperforms strong model-free and model-based baselines on image observations in complex manipulation tasks
+            containing deformable objects and variations in target object geometry.
           </div>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- <section class="section">
     <div class="container is-max-desktop">
@@ -374,14 +354,13 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{
-        gyenes2024pointpatchrl,
-        title={PointPatch{RL} - Masked Reconstruction Improves Reinforcement Learning on Point Clouds},
-        author={Balazs Gyenes and Nikolai Franke and Philipp Becker and Gerhard Neumann},
-        booktitle={8th Annual Conference on Robot Learning},
-        year={2024},
-        url={https://openreview.net/forum?id=3jNEz3kUSl}
-        }</code></pre>
+      <pre><code>@inproceedings{gyenes2024pointpatchrl,
+  title={PointPatch{RL} - Masked Reconstruction Improves Reinforcement Learning on Point Clouds},
+  author={Bal{\'a}zs Gyenes and Nikolai Franke and Philipp Becker and Gerhard Neumann},
+  booktitle={8th Annual Conference on Robot Learning},
+  year={2024},
+  url={https://openreview.net/forum?id=3jNEz3kUSl}
+}</code></pre>
     </div>
   </section>
 
