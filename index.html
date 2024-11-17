@@ -103,8 +103,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://youtu.be/nGQK7yMA75E"
-                    class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://youtu.be/nGQK7yMA75E" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
                     </span>
@@ -112,8 +111,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="./pdf/poster.pdf"
-                    class="button is-normal is-rounded is-dark">
+                  <a href="./pdf/poster.pdf" class="button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-table-columns"></i>
                     </span>
@@ -139,7 +137,12 @@
 
   <section class="hero teaser">
     <div class="container is-max-desktop">
-      <img src="./static/images/figure_overview.png">
+      <h2 class="subtitle has-text-centered">
+        <!-- <b>PointPatchRL</b> builds on the common paradigm of dividing point clouds into overlapping patches, tokenizing them, and processing the tokens with transformers.
+        We further add a masked reconstruction objective for representation learning, which masks out some of these tokens and tries to reconstruct the missing point patches.
+        PointPatchRL provides significant improvements across the 6 environments we tested compared to point cloud-based and image-based baselines, and our policies generalize across variable object geometries. -->
+      </h2>
+
       <!-- Top: We train a patching-based tokenizer and transformer encoder to compute a latent embedding for the RL policy
       and state-action-value estimation using sequence pooling. The
       entire pipeline learns using the critic's gradients while we detach the latent embedding before pro-
@@ -158,225 +161,97 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
+          <img src="./static/images/figure_overview.png">
           <div class="content has-text-justified">
-            Perceiving the environment via cameras is crucial for Reinforcement Learning (RL) in robotics.
-            While images are a convenient form of representation, they often complicate extracting important geometric
-            details, especially with varying geometries or deformable objects.
-            In contrast, point clouds naturally represent this geometry and easily integrate color and positional data
-            from
-            multiple camera views.
-            However, while deep learning on point clouds has seen many recent successes, RL on point clouds is
-            under-researched, with only the simplest encoder architecture considered in the literature.
-            We introduce PointPatchRL (PPRL), a method for RL on point clouds that builds on the common paradigm of
-            dividing
-            point clouds into overlapping patches, tokenizing them, and processing the tokens with transformers.
-            PPRL provides significant improvements compared with other point-cloud processing architectures previously
-            used
-            for RL.
-            We then complement PPRL with masked reconstruction for representation learning and show that our method
-            outperforms strong model-free and model-based baselines on image observations in complex manipulation tasks
-            containing deformable objects and variations in target object geometry.
+            <p>
+              PointPatchRL is a method for Reinforcement Learning on point clouds that harnesses their 3D structure to
+              extract task-relevant geometric information from the scene and learn complex manipulation tasks purely
+              from rewards.
+            </p>
+            <p>
+              While images are a convenient format for perceiving the environment for RL, they often complicate
+              extracting important geometric details, especially with <b>varying geometries</b> or <b>deformable
+                objects</b>.
+              In contrast, <b>point clouds</b> naturally represent this geometry and easily integrate positional and
+              color data from <b>multiple camera views</b>.
+              However, while deep learning on point clouds has seen many recent successes, RL on point clouds is
+              under-researched, with usually only the simplest encoder architecture considered in the literature.
+            </p>
+            <p>
+              We introduce <b>PointPatchRL (PPRL)</b>, a method for RL on point clouds that builds on the common
+              paradigm
+              of dividing point clouds into <b>overlapping patches</b>, <b>tokenizing</b> them, and processing the
+              tokens
+              with <b>transformers</b>.
+              PPRL provides significant improvements compared with other point-cloud architectures previously used for
+              RL.
+              We then complement PPRL with <b>masked reconstruction</b> for representation learning and show that our
+              method outperforms strong model-free and model-based baselines on image observations in complex
+              manipulation
+              tasks containing deformable objects and variations in target object geometry.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- <section class="section">
+  <section class="section">
     <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
 
-      <h2 class="title is-3">Diverse Skill Learning</h2>
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-4">Automatic Curriculum Learning using Energy-Based per-Expert Context Distribution</h2>
+          <h2 class="title is-3">Why Point Clouds?</h2>
 
-          Figure 1 depicts the sampling procedure of Di-SkilL.During Inference the agent observes contexts
-          $\boldsymbol{c}$ from the environment's unknown context
-          distribution $p(\boldsymbol{c})$. The agent calculates the gating probabilities $\pi(o|\boldsymbol{c})$ for
-          each
-          context and samples an expert $o$ resulting in $(o, \boldsymbol{c})$ samples marked in blue. During
-          Training we first sample a batch of contexts $\boldsymbol{c}$ from $p(\boldsymbol{c})$, which is used to
-          calculate the per-expert context distribution $\pi(\boldsymbol{c}|o)$ for each expert $o = 1,..., K$.
-          The $\pi(\boldsymbol{c}|o)$ provides a higher probability for contexts preferred by the expert
-          $\pi(\boldsymbol{\theta}|\boldsymbol{c}, o)$. To enable curriculum learning, we provide each expert the
-          contexts sampled from its corresponding
-          $\pi(\boldsymbol{c}|o)$, resulting in the samples $(o, \boldsymbol{c}_T)$ marked in orange. In both cases,
-          the chosen $\pi(\boldsymbol{\theta}|\boldsymbol{c}, o)$ samples motion primitive parameters
-          $\boldsymbol{\theta}$ for each context, resulting in
-          a trajectory $\tau$ that is subsequently executed on the environment. Before execution, the corresponding
-          context, e.g., the goal position of a box, needs to be set in the environment. This is illustrated by the
-          dashed arrows, with the context in blue for inference and orange for training.
-
-        </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-4">Specializing and Overlapping Context Distributions lead to Diverse Skills</h2>
-          <img src="./static/images/fig2.png" style="width: 80%; height: auto; margin-left: auto; margin-right: auto;
-          display: block;">
-          <p>
-            Figure 2: (a) High-probability regions of the individual per-expert context distributions, where a
-            color represents an expert $o$. (b) Number of active experts for context regions.
-          </p>
-          <br>
-          <p>
-            The maximum entropy-based objective allows learning diverse skills to the same or similar tasks defined by
-            the contexts. For this, the per-expert context distributions need to specialize in a sub region of the
-            context context space (a), but at the same time overlapping regions are necessary to learn diverse skills
-            to similar tasks (b). These properties are ensured by the decomposed objective (please see the paper).
-          </p>
-        </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3">Tasks</h2>
-          <div class="columns is-multiline">
-            <div class="column is-half">
-              <h3 class="title is-4">5-Link Reacher</h3>
-              <div class="content has-text-justified">
-                <p>
-                  The 5-Link reacher task is an extension of the classical 2-Link reacher task from OpenAI Gym.
-                  The reacher has to reach a goal position with its tip within all quadrants in the context space.
-                  A significant challenge in this task is the time-sparse reward that provides only a reward signal
-                  at the end of the episode.
-                </p>
-                <p>
-                  The following video shows diverse reaching skills learned by Di-SkilL. The skills were sampled during
-                  inference time from the gating distribution.
-                </p>
-              </div>
-              <div class="content has-text-centered">
-                <video id="replay-video" autoplay controls muted preload playsinline width="80%">
-                  <source src="./static/videos/reacher/reacher.mp4" type="video/mp4">
-                </video>
-              </div>
-              <br />
-            </div>
-            <div class="column is-half">
-              <h3 class="title is-4">Box Pushing with Obstacles</h3>
-              <div class="content has-text-justified">
-                <p>
-                  In the Box Pushing with Obstacle task a 7-DoF robot is tasked to push a box to a target position and
-                  rotation while avoiding an obstacle. The 5-dimensional context consists of the box's target
-                  position, orientation and the obstacle's position. The task is additionally challenging due to the
-                  time-sparse reward structure.
-                </p>
-                <p>
-                  The following video shows diverse reaching skills learned by Di-SkilL. The skills were sampled
-                  during inference time from the gating distribution.
-                </p>
-              </div>
-              <div class="content has-text-centered">
-                <video id="replay-video" autoplay controls muted preload playsinline width="86%">
-                  <source src="./static/videos/bpobs/bpobs.mp4" type="video/mp4">
-                </video>
-              </div>
-              <br />
-            </div>
-
-            <h3 class="title is-4">Hopper Jump</h3>
-            <div class="content has-text-justified">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin: 20px;">
+            <img src="./static/gifs/pointclouds/turnfaucet_5004_2.gif" alt="A pointcloud of one faucet"
+              style="max-width: 20%; height: auto; margin-right: 20px;">
+            <img src="./static/gifs/pointclouds/turnfaucet_5000_1.gif"
+              alt="A pointcloud of a completely different faucet"
+              style="max-width: 20%; height: auto; margin-right: 20px;">
+            <div style="flex: 1; text-align: left;">
               <p>
-                The Hopper from OpenAI Gym is tasked to jump as high as possible while landing in a goal position as
-                marked by the green and red dots. This task has a non-markovian reward structure which makes learning
-                skills with step-based approaches infeasible.
-              </p>
-              <p>
-                The following videos show the behaviors of Di-SkilL's individual experts. We have sampled contexts from
-                each per-expert context distribution and exectued the corresponding expert. The goal of the videos
-                is to show that each expert is learning different skills.
-                This <strong> first expert (left)</strong> builds momentum for the jump by using the first joint and
-                stabilizes by
-                landing on its foot.
-                </br>
-                This <strong> second expert (middle) </strong> builds momentum for the jump by using the first joint and
-                stabilizes by
-                landing on the hopper's "head". The expert is responsible for landing positions that are further away
-                from the initial position.
-                </br>
-                This <strong> third expert (right)</strong> builds momentum for the jump by using the first joint and
-                stabilizes by
-                landing on the hopper's "head". The expert is responsible for landing positions that are next to the
-                initial position.
+                Easier to extract task-relevant geometry
               </p>
             </div>
-            <div class="content has-text-centered">
-              <video id="replay-video" autoplay controls muted preload playsinline width="33%">
-                <source src="./static/videos/hj/expert1.mp4" type="video/mp4">
-              </video>
-
-              <video id="replay-video" autoplay controls muted preload playsinline width="33%">
-                <source src="./static/videos/hj/expert2.mp4" type="video/mp4">
-              </video>
-              <video id="replay-video" autoplay controls muted preload playsinline width="33%">
-                <source src="./static/videos/hj/expert3.mp4" type="video/mp4">
-              </video>
-            </div>
-            <br />
-
-            <h3 class="title is-4">Table Tennis</h3>
-            <div class="content has-text-justified">
-              <p>
-                In the table tennis task a 7-degree of freedom (DoF) robot has to learn fast and precise motions to
-                smash
-                the ball to a desired position on the opponent's side. The 5-dimensional. context consists of the
-                incoming
-                ball's landing position, the desired landing position on the opponent's side and the ball's initial
-                velocity. The table tennis environment requires good exploratory behavior and has a non-makrovian reward
-                structure making step-based approaches infeasible to learn usefull skills.
-              </p>
-              <p>
-                The videos blow show diverse striking skills learned by Di-SkilL. For each of the videos the ball's
-                landing position on the opponent's side is fixed and the ball's inital landing position and velocity are
-                varied. The shown skills correspond to executing the experts sampled from the gatinng distribution
-                during
-                inference.
-              </p>
-            </div>
-            <div class="content has-text-centered">
-              <video id="replay-video" autoplay controls muted preload playsinline width="49%">
-                <source src="./static/videos/tt/tt1.mp4" type="video/mp4">
-              </video>
-              <video id="replay-video" autoplay controls muted preload playsinline width="49%">
-                <source src="./static/videos/tt/tt2.mp4" type="video/mp4">
-              </video>
-              <video id="replay-video" autoplay controls muted preload playsinline width="49%">
-                <source src="./static/videos/tt/tt3.mp4" type="video/mp4">
-              </video>
-              <video id="replay-video" autoplay controls muted preload playsinline width="49%">
-                <source src="./static/videos/tt/tt4.mp4" type="video/mp4">
-              </video>
-            </div>
-            <br />
-            <h3 class="title is-4">Robot Mini Golf</h3>
-            <div class="content has-text-justified">
-              <p>
-                The 7-DoF robot is tasked to hit the ball in an environment with two obstacles, where the blue obstacle
-                is static and the green is reset in each episode. The ball has to pass the tight goal on the other side
-                of the table to achieve a success. This environment has a non-markovian reward structure which makes
-                learning difficult.
-              </p>
-              <p>
-                The following video shows diverse skills where the goal is fixed and the ball's and the obstacle's
-                initial positions are varied. The experts are sampled from the gating distribution during inference.
-              </p>
-            </div>
-            <div class="content has-text-centered">
-              <video id="replay-video" autoplay controls muted preload playsinline width="60%">
-                <source src="./static/videos/mg/mg.mp4" type="video/mp4">
-              </video>
-            </div>
-            <br />
           </div>
+
+          <div style="display: flex; align-items: center; justify-content: space-between; margin: 20px;">
+            <img src="./static/gifs/pointclouds/turnfaucet_5010_1.gif"
+              style="max-width: 20%; height: auto; margin-left: calc(10% + 10px); margin-right: calc(10% + 10px + 20px);">
+            <div style="flex: 1; text-align: left;">
+              <p>
+                Disentangle occluded objects from their occluders
+              </p>
+            </div>
+          </div>
+
+          <div class="container" style="display: flex; align-items: center; margin: 20px;">
+            <div
+              style="width: 40%; margin-right: calc(20px + 20px); display: flex; flex-direction: column; align-items: center;">
+              <div style="display: flex; align-items: center; justify-content: center; width: 100%">
+                <img src="./static/gifs/pointclouds/TurnFaucet_5011_base_2024-10-22_04-40-02.png"
+                  alt="A faucet from one perspective" style="width: 40%; height: auto;">
+                <span style="margin: 0 5px; font-size: 24px; font-weight: bold;">+</span>
+                <img src="./static/gifs/pointclouds/TurnFaucet_5011_hand_2024-10-22_04-40-21.png"
+                  alt="The same faucet from a different perspective" style="width: 43%; height: auto;">
+              </div>
+              <div style="margin-top: 5px; width: 100%; display: flex; justify-content: center;">
+                <img src="./static/gifs/pointclouds/turnfaucet_5011_1.gif" alt="GIF Description"
+                  style="width: 50%; height: auto;">
+              </div>
+            </div>
+            <div style="flex: 1; text-align: left;">
+              <p>
+                Combine multiple camera views
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
-
-
     </div>
-  </section> -->
-
+  </section>
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
@@ -393,17 +268,18 @@
 
 
   <footer class="footer">
-   <div class="container">
-     <div class="columns is-centered">
-       <div class="column is-8">
-         <div class="content">
-           <p>
-            This website template was borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
-           </p>
-         </div>
-       </div>
-     </div>
-   </div>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website template was borrowed from <a
+                href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 
 </body>
