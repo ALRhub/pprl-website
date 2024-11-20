@@ -196,6 +196,7 @@
     </div>
   </section>
 
+  <!-- Why Point Clouds? -->
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
@@ -237,8 +238,8 @@
                   alt="The same faucet from a different perspective" style="width: 43%; height: auto;">
               </div>
               <div style="margin-top: 5px; width: 100%; display: flex; justify-content: center;">
-                <img src="./static/gifs/pointclouds/turnfaucet_5011_1.gif" alt="GIF Description"
-                  style="width: 50%; height: auto;">
+                <img src="./static/gifs/pointclouds/turnfaucet_5011_1.gif"
+                  alt="A point cloud made from combining both perspectives" style="width: 50%; height: auto;">
               </div>
             </div>
             <div style="flex: 1; text-align: left;">
@@ -253,6 +254,55 @@
     </div>
   </section>
 
+  <!-- Method -->
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+
+        <!-- PointPatchRL. -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3">PointPatchRL</h2>
+            <p>
+              PointPatchRL is a powerful point cloud encoder in its own right, due to the well-known patching and
+              tokenizing paradigm.
+              As a simple, drop-in replacement for any other point cloud encoder, PointPatchRL increases sample
+              efficiency compared to commonly-used architectures (like PointNet).
+              No need to add a reconstruction loss to the learning pipeline if not desired!
+            </p>
+            <img src="./static/images/overview_noreconstruction.png"
+              alt="PointPatchRL is a powerful point cloud encoder in its own right" style="width: 95%; height: auto;">
+          </div>
+        </div>
+        <!--/ PointPatchRL. -->
+
+        <!-- PointPatchRL + Aux. -->
+        <div class="column">
+          <h2 class="title is-3">PointPatchRL + Aux</h2>
+          <div class="columns is-centered">
+            <div class="column content">
+              <p>
+                We can add to the strong baseline provided by PointPatchRL by introducing the auto-regressive masked
+                reconstruction loss used in PointGPT.
+                This results in even greater sample efficiency on complex manipulation tasks with multiple (potentially
+                moving) cameras.
+                PointPatchRL + Aux outperforms both point cloud-based and image-based baselines.
+              </p>
+              <img src="./static/images/figure_overview.png"
+                alt="PointPatchRL + Aux is superior to point cloud-based and image-based baselines"
+                style="width: 100%; height: auto;">
+            </div>
+
+          </div>
+        </div>
+        <!--/PointPatchRL + Aux. -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BibTeX -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
