@@ -206,7 +206,7 @@
 
           <div style="display: flex; align-items: center; justify-content: space-between; margin: 20px;">
             <img src="./static/gifs/pointclouds/turnfaucet_5004_2.gif" alt="A pointcloud of one faucet"
-              style="max-width: 20%; height: auto; margin-right: 20px;">
+              style="max-width: 20%; height: auto; margin-right: 2%;">
             <img src="./static/gifs/pointclouds/turnfaucet_5000_1.gif"
               alt="A pointcloud of a completely different faucet"
               style="max-width: 20%; height: auto; margin-right: 20px;">
@@ -219,7 +219,7 @@
 
           <div style="display: flex; align-items: center; justify-content: space-between; margin: 20px;">
             <img src="./static/gifs/pointclouds/turnfaucet_5010_1.gif"
-              style="max-width: 20%; height: auto; margin-left: calc(10% + 10px); margin-right: calc(10% + 10px + 20px);">
+              style="max-width: 30%; height: auto; margin-left: 6%; margin-right: calc(6% + 20px);">
             <div style="flex: 1; text-align: left;">
               <p>
                 Disentangle occluded objects from their occluders
@@ -229,15 +229,15 @@
 
           <div class="container" style="display: flex; align-items: center; margin: 20px;">
             <div
-              style="width: 40%; margin-right: calc(20px + 20px); display: flex; flex-direction: column; align-items: center;">
+              style="width: 42%; margin-right: 20px; display: flex; flex-direction: column; align-items: center;">
               <div style="display: flex; align-items: center; justify-content: center; width: 100%">
                 <img src="./static/gifs/pointclouds/TurnFaucet_5011_base_2024-10-22_04-40-02.png"
                   alt="A faucet from one perspective" style="width: 40%; height: auto;">
-                <span style="margin: 0 5px; font-size: 24px; font-weight: bold;">+</span>
+                <span style="margin: 0 1%; font-size: 24px; font-weight: bold;">+</span>
                 <img src="./static/gifs/pointclouds/TurnFaucet_5011_hand_2024-10-22_04-40-21.png"
                   alt="The same faucet from a different perspective" style="width: 43%; height: auto;">
               </div>
-              <div style="margin-top: 5px; width: 100%; display: flex; justify-content: center;">
+              <div style="margin-top: 2%; width: 100%; display: flex; justify-content: center;">
                 <img src="./static/gifs/pointclouds/turnfaucet_5011_1.gif"
                   alt="A point cloud made from combining both perspectives" style="width: 50%; height: auto;">
               </div>
@@ -312,30 +312,45 @@
         The tasks contain either deformable objects, or geometric variations across a set of rigid objects.
       </p>
       <div class="columns is-centered">
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, auto); gap: 16px; padding: 20px; background: white; border: 2px solid #ddd; border-radius: 8px;">
+        <div style="display: grid;
+                    grid-template-columns: repeat(3, minmax(50px, 1fr));
+                    grid-template-rows: repeat(2, auto);
+                    gap: 16px;
+                    padding: 20px;
+                    background: white;
+                    border: 2px solid #ddd;
+                    border-radius: 8px;
+                    margin-top: 20px;">
+          <!-- &shy; tells the browser where to break the word when wrapping a line -->
           <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <img src="./static/gifs/envs/threadinhole1.gif" alt="ThreadInHole env" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <figcaption style="margin-top: 8px; font-size: 14px; color: #555;">ThreadInHole</figcaption>
+            <img src="./static/gifs/envs/threadinhole1.gif" alt="ThreadInHole env"
+              style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <figcaption style="overflow-wrap: break-word; margin-top: 8px; font-size: 14px; color: #555;">Thread&shy;In&shy;Hole</figcaption>
           </figure>
           <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <img src="./static/gifs/envs/deflectspheres2.gif" alt="DeflectSpheres env" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <figcaption style="margin-top: 8px; font-size: 14px; color: #555;">DeflectSpheres</figcaption>
+            <img src="./static/gifs/envs/deflectspheres2.gif" alt="DeflectSpheres env"
+              style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <figcaption style="overflow-wrap: break-word; margin-top: 8px; font-size: 14px; color: #555;">Deflect&shy;Spheres</figcaption>
           </figure>
           <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <img src="./static/gifs/envs/pushchair2.gif" alt="PushChair env" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <figcaption style="margin-top: 8px; font-size: 14px; color: #555;">PushChair</figcaption>
+            <img src="./static/gifs/envs/pushchair2.gif" alt="PushChair env"
+              style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <figcaption style="overflow-wrap: break-word; margin-top: 8px; font-size: 14px; color: #555;">Push&shy;Chair</figcaption>
           </figure>
           <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <img src="./static/gifs/envs/opencabinetdrawer2.gif" alt="OpenCabinetDrawer env" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <figcaption style="margin-top: 8px; font-size: 14px; color: #555;">OpenCabinetDrawer</figcaption>
+            <img src="./static/gifs/envs/opencabinetdrawer2.gif" alt="OpenCabinetDrawer env"
+              style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <figcaption style="overflow-wrap: break-word; margin-top: 8px; font-size: 14px; color: #555;">Open&shy;Cabinet&shy;Drawer</figcaption>
           </figure>
           <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <img src="./static/gifs/envs/opencabinetdoor2.gif" alt="OpenCabinerDoor env" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <figcaption style="margin-top: 8px; font-size: 14px; color: #555;">OpenCabinerDoor</figcaption>
+            <img src="./static/gifs/envs/opencabinetdoor2.gif" alt="OpenCabinerDoor env"
+              style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <figcaption style="overflow-wrap: break-word; margin-top: 8px; font-size: 14px; color: #555;">Open&shy;Cabiner&shy;Door</figcaption>
           </figure>
           <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <img src="./static/gifs/envs/turnfaucet1.gif" alt="TurnFaucet env" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <figcaption style="margin-top: 8px; font-size: 14px; color: #555;">TurnFaucet</figcaption>
+            <img src="./static/gifs/envs/turnfaucet1.gif" alt="TurnFaucet env"
+              style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <figcaption style="overflow-wrap: break-word; margin-top: 8px; font-size: 14px; color: #555;">Turn&shy;Faucet</figcaption>
           </figure>
         </div>
       </div>
@@ -348,17 +363,32 @@
     <div class="container is-max-desktop">
       <h2 class="title is-3">Diverse Policies</h2>
       <p>
-        Agents trained with PPRL + Aux adapt to varying geometries, including handle size and orientation, and whether the door opens to the left or right.
+        Agents trained with PPRL + Aux adapt to varying geometries, including handle size and orientation, and whether
+        the door opens to the left or right.
         The policy coordinates the movements of the gripper and the base and generalizes over varying object geometry.
       </p>
       <div class="columns is-centered">
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, auto); gap: 16px; padding: 20px; background: white; border: 2px solid #ddd; border-radius: 8px;">
-          <img src="./static/gifs/diverse_policies/bhARCSI2.gif" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-          <img src="./static/gifs/diverse_policies/cmwSBT3N.gif" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-          <img src="./static/gifs/diverse_policies/IOJ7rDaa.gif" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-          <img src="./static/gifs/diverse_policies/pFO7GNf8.gif" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-          <img src="./static/gifs/diverse_policies/y9HQFZsL.gif" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-          <img src="./static/gifs/diverse_policies/Yhlnfvi1.gif" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <div style="display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(2, auto);
+                    gap: 16px;
+                    padding: 20px;
+                    background: white;
+                    border: 2px solid #ddd;
+                    border-radius: 8px;
+                    margin-top: 20px;">
+          <img src="./static/gifs/diverse_policies/bhARCSI2.gif"
+            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="./static/gifs/diverse_policies/cmwSBT3N.gif"
+            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="./static/gifs/diverse_policies/IOJ7rDaa.gif"
+            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="./static/gifs/diverse_policies/pFO7GNf8.gif"
+            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="./static/gifs/diverse_policies/y9HQFZsL.gif"
+            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="./static/gifs/diverse_policies/Yhlnfvi1.gif"
+            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
         </div>
       </div>
     </div>
