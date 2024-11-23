@@ -257,13 +257,13 @@
   <!-- Method -->
   <section class="section">
     <div class="container is-max-desktop">
-
+      <h2 class="title is-3">Method</h2>
       <div class="columns is-centered">
 
         <!-- PointPatchRL. -->
         <div class="column">
           <div class="content">
-            <h2 class="title is-3">PointPatchRL</h2>
+            <h2 class="title is-4">PointPatchRL</h2>
             <p>
               PointPatchRL is a powerful point cloud encoder in its own right, due to the well-known patching and
               tokenizing paradigm.
@@ -279,7 +279,7 @@
 
         <!-- PointPatchRL + Aux. -->
         <div class="column">
-          <h2 class="title is-3">PointPatchRL + Aux</h2>
+          <h2 class="title is-4">PointPatchRL + Aux</h2>
           <div class="columns is-centered">
             <div class="column content">
               <p>
@@ -296,11 +296,74 @@
 
           </div>
         </div>
-        <!--/PointPatchRL + Aux. -->
+        <!--/ PointPatchRL + Aux. -->
 
       </div>
     </div>
   </section>
+  <!--/ Method -->
+
+  <!-- Policy Videos. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Policy Videos</h2>
+      <p>
+        Our method outperforms point cloud-based and image-based baselines on 6 challenging manipulation tasks.
+        The tasks contain either deformable objects, or geometric variations across a set of rigid objects.
+      </p>
+      <div class="columns is-centered">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, auto); gap: 16px; padding: 20px; background: white; border: 2px solid #ddd; border-radius: 8px;">
+          <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="./static/gifs/envs/threadinhole1.gif" alt="ThreadInHole env" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <figcaption style="margin-top: 8px; font-size: 14px; color: #555;">ThreadInHole</figcaption>
+          </figure>
+          <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="./static/gifs/envs/deflectspheres2.gif" alt="DeflectSpheres env" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <figcaption style="margin-top: 8px; font-size: 14px; color: #555;">DeflectSpheres</figcaption>
+          </figure>
+          <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="./static/gifs/envs/pushchair2.gif" alt="PushChair env" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <figcaption style="margin-top: 8px; font-size: 14px; color: #555;">PushChair</figcaption>
+          </figure>
+          <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="./static/gifs/envs/opencabinetdrawer2.gif" alt="OpenCabinetDrawer env" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <figcaption style="margin-top: 8px; font-size: 14px; color: #555;">OpenCabinetDrawer</figcaption>
+          </figure>
+          <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="./static/gifs/envs/opencabinetdoor2.gif" alt="OpenCabinerDoor env" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <figcaption style="margin-top: 8px; font-size: 14px; color: #555;">OpenCabinerDoor</figcaption>
+          </figure>
+          <figure style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <img src="./static/gifs/envs/turnfaucet1.gif" alt="TurnFaucet env" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <figcaption style="margin-top: 8px; font-size: 14px; color: #555;">TurnFaucet</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Policy Videos. -->
+
+  <!-- Diverse Policies. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Diverse Policies</h2>
+      <p>
+        Agents trained with PPRL + Aux adapt to varying geometries, including handle size and orientation, and whether the door opens to the left or right.
+        The policy coordinates the movements of the gripper and the base and generalizes over varying object geometry.
+      </p>
+      <div class="columns is-centered">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, auto); gap: 16px; padding: 20px; background: white; border: 2px solid #ddd; border-radius: 8px;">
+          <img src="./static/gifs/diverse_policies/bhARCSI2.gif" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="./static/gifs/diverse_policies/cmwSBT3N.gif" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="./static/gifs/diverse_policies/IOJ7rDaa.gif" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="./static/gifs/diverse_policies/pFO7GNf8.gif" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="./static/gifs/diverse_policies/y9HQFZsL.gif" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="./static/gifs/diverse_policies/Yhlnfvi1.gif" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Diverse Policies. -->
 
   <!-- BibTeX -->
   <section class="section" id="BibTeX">
